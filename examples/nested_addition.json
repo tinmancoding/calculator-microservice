@@ -1,0 +1,9 @@
+{
+  "operation": "+",
+  "left": 5,
+  "right": {
+    "operation": "+",
+    "left": 5,
+    "right": 5
+  }
+}
