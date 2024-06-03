@@ -1,5 +1,5 @@
 FROM python:3.12-bookworm as builder
-ARG APP_NAME
+ARG APP_NAME=gateway
 
 RUN pip install --no-cache-dir poetry==1.8.3
 
@@ -20,7 +20,7 @@ RUN poetry install --no-root && rm -rf $POETRY_CACHE_DIR
 
 # The runtime image, used to just run the code provided its virtual environment
 FROM python:3.12-slim-bookworm as runtime
-ARG APP_NAME
+ARG APP_NAME=gateway
 
 ENV VIRTUAL_ENV=/app/.venv \
   PATH="/app/.venv/bin:$PATH"

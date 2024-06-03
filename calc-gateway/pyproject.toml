@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "calc-gateway"
+version = "0.1.0"
+description = ""
+authors = ["Tin Man <tinman@learn-to-code.club>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+calc-common = {path = "../calc-common", develop = true}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
