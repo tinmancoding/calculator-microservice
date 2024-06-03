@@ -24,6 +24,8 @@ podman build --platform=linux/amd64 -t calc-multiplication:latest --build-arg="A
 podman build --platform=linux/amd64 -t calc-subtraction:latest --build-arg="APP_NAME=subtraction" .
 
 podman build --platform=linux/amd64 -t calc-division:latest --build-arg="APP_NAME=division" .
+
+podman build --platform=linux/amd64 -t calc-gateway:latest --build-arg="APP_NAME=gateway" .
 ```
 
 Pushing the images to DockerHub;
@@ -37,4 +39,5 @@ podman push localhost/calc-subtraction:latest tinmancoding/calc-subtraction:late
 
 podman push localhost/calc-division:latest tinmancoding/calc-division:latest
 
+podman push localhost/calc-gateway:latest tinmancoding/calc-gateway:latest
 ```
